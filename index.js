@@ -16,7 +16,7 @@ const getSha = () => new Promise((resolve) => git.short(value => resolve(value))
 module.exports = async (req, res) => {
   const [branch, sha] = await Promise.all([ getBranch(), getSha() ])
   send(res, 200, { 
-    attempt: 5,
+    attempt: 21,
     name, 
     branch, 
     sha,
