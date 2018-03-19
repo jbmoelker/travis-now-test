@@ -12,7 +12,8 @@ before_script:
 script:
   - echo "nothing yet"
 after_success:
-  - node_modules/.bin/now-travis
+  - test $TRAVIS_PULL_REQUEST = "true" && node_modules/.bin/now-travis
+  - test $TRAVIS_BRANCH = "master" && NOW_ALIAS=travis-now-test node_modules/.bin/now-travis
 env:
   global:
     - secure: >-
