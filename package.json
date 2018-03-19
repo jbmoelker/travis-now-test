@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "micro-dev $npm_package_main",
+    "deploy": "now -e NODE_ENV=production",
     "start": "NODE_ENV=production micro $npm_package_main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/jbmoelker/travis-now-test#readme",
   "devDependencies": {
     "micro-dev": "2.2.2",
+    "now": "10.2.1",
     "now-travis": "1.2.0"
   },
   "dependencies": {
