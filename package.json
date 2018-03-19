@@ -1,0 +1,30 @@
+{
+  "name": "travis-now-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "micro-dev $npm_package_main",
+    "start": "NODE_ENV=production micro $npm_package_main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmoelker/travis-now-test.git"
+  },
+  "keywords": [],
+  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbmoelker/travis-now-test/issues"
+  },
+  "homepage": "https://github.com/jbmoelker/travis-now-test#readme",
+  "devDependencies": {
+    "micro-dev": "2.2.2",
+    "now-travis": "1.2.0"
+  },
+  "dependencies": {
+    "git-rev": "0.2.1",
+    "micro": "9.1.4"
+  }
+}
