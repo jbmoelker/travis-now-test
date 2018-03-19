@@ -1,0 +1,21 @@
+sudo: false
+language: node_js
+node_js:
+  - '8'
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+before_script:
+  - npm prune
+script:
+  - echo "nothing yet"
+after_success:
+  - node_modules/.bin/now-travis
+env:
+  global:
+    - secure: >-
+        IRmjYZRTkLYRHeiMJ5z/AfiX1VCH03EU+Kf4WnRbUTM/qf2t9Q3uJq9krGU1yWeMQB6h6cKijlOdfo/28eOMS4W4U+emcREBiHu7zhGxo4epNaoS9Bq4lEoPbmJxRImKMmSbE+pmKfYC79Rfl+cJLQZzYQLVkjDgp29ENJGiy1A48Ofm92og7Npc+EwKkrdI+uoXTZosrOWUGZnYMx1ROXvGzHbl0lwAiqQlcC9UZvsSM7b53GvWbmhT7audTgPzDmE0JAf2NaIZvMR8D4BUEQ7obiR9JelU6gXmsC/qX9fu4nV10P0ou/mOfOEh/USl+fGxZ9u1P6OI6FQQJImvJd4HRBo6cYIIW9My5AwW4Pd5+4etenLE8gSGDM8EH1xMfWbBtIsfmcqYDKm/AoYkq0KQxMff6MoszKILxVDWV/2QVM40rjiX/iMNMhW2rib7SHBxpAf8lbJJ0mBlLKxvCjfL4PNDj6OUCFGEaWd7Ak32zZOuT42oY3aOzL1L7ZIjrYxBc33q52Cmpg6UQdX9m910OQJDi/s9881reBaxA/wGgEKKKsrBEjOGtprzFzMHQvhvJCBjfpdQDS1SFEnWOsEbn6sX8z+KixDLn7ghm7tqgCm4DpgMdssjrpvWacBNxtLEjWh0qyyy/5/umsHEXdcVYOh5hjSalHkaBVx8nLE=
+    - secure: >-
+        meti+bKM6GamOrAJyWBhqqdAe5ELzl+cJcdRjzNyPw3XbMKM8pmEwd4WsSba1tpJFCIruSOZaleeaJP3If3sgWe8fPai7DzfLfmVlJSoCPQId0CMe5h7Ytk8JgKuhMqD8BB9Y5E3J0Z5ZO2cqSS6BqkD9+XgLcyCKf3RdQX99NA0TYcTFGosOTowN7bONT8uq2px5YJxbG2vyMJR19iDYOSRJiknkKbQjVkVc696izYIPIj9vBUoc6VmtBgoJFjxsKahLJTquwkygqo7U9snlmKvdwswvbIeiPlZRQ4WrFvajDOEBWSsZ4muibH0yrfMJnhc9nIPFb/oDVJBiUCwcAeMorf40DSuSm3THPvJk/KEAhU7x+2WHDRQYe0KFxEONvJZJuyeuxtwpIVZqJRCz8B5KLGlNeMNf09GgWYC2l/PT1c9zswhBZVzdWGkpQ453Cb0/YupEnUZ3ci5+mynkvcOCUpq0SQOCbepZlNADd2M39GGXsYyVN+z83uLAOgZ5KM2HiS+IMH6UwoVqm0nH0rUz4Mca14edSBrs2z7QzF6KYyxuRo/mGdqtuXiVRNRVC43IF5OXJ5A4Xnccuh1dUW0dzP1lCXnLdnlCJTYFniOropbh4cbmju7DwyQjc7tHoEl+QpioCVe/QaA9CbnlyMptnDl1a+dmyARZOSyN1A=
