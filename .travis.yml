@@ -12,6 +12,7 @@ before_script:
 script:
   - echo "nothing yet"
 after_success:
+  - echo "Travis event type: $TRAVIS_EVENT_TYPE"
   - test $TRAVIS_PULL_REQUEST = "true" && echo "deploy staging" && node_modules/.bin/now-travis
   - test $TRAVIS_BRANCH = "master" && echo "deploy and alias" && NOW_ALIAS=travis-now-test node_modules/.bin/now-travis
 env:
