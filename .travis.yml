@@ -15,8 +15,8 @@ after_success:
   - echo "Travis branch = $TRAVIS_BRANCH"
   - echo "Travis event type = $TRAVIS_EVENT_TYPE"
   - echo "Travis pull request = $TRAVIS_PULL_REQUEST"
-  - test $TRAVIS_EVENT_TYPE = "pull_request" && echo "Deploy PR to Now" && now-travis
-  - test $TRAVIS_EVENT_TYPE = "push" && test $TRAVIS_BRANCH = "master" && echo "Deploy master and alias" && now-travis && now alias --token=$NOW_TOKEN
+  - test $TRAVIS_EVENT_TYPE = "pull_request" && echo "Deploy PR to Now" && ./bin/now-travis --env TRAVIS_BRANCH --env TRAVIS_PULL_REQUEST
+  - test $TRAVIS_EVENT_TYPE = "push" && test $TRAVIS_BRANCH = "master" && echo "Deploy master and alias" && ./bin/now-travis --env TRAVIS_BRANCH --env TRAVIS_PULL_REQUEST && now alias --token=$NOW_TOKEN
 env:
   global:
     - secure: >-
