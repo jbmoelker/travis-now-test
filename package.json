@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "dev": "micro-dev $npm_package_main",
-    "deploy": "now -e NODE_ENV=production",
     "start": "NODE_ENV=production micro $npm_package_main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,13 +20,8 @@
   },
   "homepage": "https://github.com/jbmoelker/travis-now-test#readme",
   "devDependencies": {
-    "cross-spawn": "6.0.5",
-    "micro-dev": "2.2.2",
-    "normalize-url": "2.0.1",
-    "now": "10.2.1",
-    "now-travis": "1.2.0",
-    "octonode": "0.9.2",
-    "url-regex": "4.1.1"
+    "@jbmoelker/now-travis": "1.2.3",
+    "micro-dev": "2.2.2"
   },
   "dependencies": {
     "git-rev": "0.2.1",
