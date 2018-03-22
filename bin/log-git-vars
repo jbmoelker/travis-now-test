@@ -1,0 +1,12 @@
+#! /usr/bin/env node
+
+const git = require('git-rev')
+
+const getBranch = () => new Promise((resolve) => git.branch(value => resolve(value)))
+const getSha = () => new Promise((resolve) => git.short(value => resolve(value)))
+
+Promise.all([getBranch(), getSha()])
+    .then(([branch, sha]) => {
+        console.log(`Git branch: ${branch}`)
+        console.log(`Git sha: ${sha}`)
+    })

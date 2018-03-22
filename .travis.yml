@@ -12,6 +12,7 @@ before_script:
 script:
   - echo "nothing yet"
 after_success:
+  - ./bin/log-git-vars
   - echo "Travis branch = $TRAVIS_BRANCH"
   - echo "Travis event type = $TRAVIS_EVENT_TYPE"
   - echo "Travis pull request = $TRAVIS_PULL_REQUEST"
